@@ -1,0 +1,35 @@
+<div class="row text-center">
+  <div class="col-lg-6">
+    <h3>To Do</h3>
+    @if (todosDo.length) {
+      <div class="container">
+        @for (todo of todosDo; track todo) {
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">{{ todo.task }}</h5>
+              <button (click)="toggle(todo)" class="btn btn-success">Mark Done</button>
+              <button (click)="deleteTask(todo)" class="btn btn-danger">Delete</button>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+  <div class="col-lg-6 ">
+    <h3>Done</h3>
+    @if (todosDone.length) {
+      <div class=" ">
+        @for (todo of todosDone; track todo) {
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">{{ todo.task }}</h5>
+              <button (click)="toggle(todo)" class="btn btn-warning">Mark Todo</button>
+              <button (click)="deleteTask(todo)" class="btn btn-danger">Delete</button>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

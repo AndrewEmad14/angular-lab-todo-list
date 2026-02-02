@@ -1,0 +1,10 @@
+
+<div class=" vw-100 vh-100">
+<app-todo-form (addTodo)="addTodo($event)"></app-todo-form>
+<app-todo-list
+[todos]="todos"
+(deleteTodo)="deleteTodo($event)">
+</app-todo-list>
+
+</div>
+
